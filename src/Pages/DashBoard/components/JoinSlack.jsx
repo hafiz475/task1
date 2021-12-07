@@ -1,0 +1,93 @@
+import { darkThemeColor ,themeColor, hoverEffect } from "../utils";
+import React from "react";
+import styled from "styled-components";
+import { FaSlack } from "react-icons/fa";
+
+
+function JoinSlack () {
+    return <JoinChannel>
+                <CardContent>
+                    <Slack>
+                        <SlackLogo>
+                            <FaSlack />
+                        </SlackLogo>
+                        
+                        <SlackText>
+                            <SlackHead>Engage with clients</SlackHead>
+                            <SlackFoot>Join Slack channel</SlackFoot>
+                        </SlackText>
+                    </Slack>
+
+                    <SlackJoin>Join Now</SlackJoin>
+                </CardContent>
+           </JoinChannel>;
+}
+
+const JoinChannel = styled.div`
+    background: ${darkThemeColor};
+    height: 50%;
+    margin-top: 6.5rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    transition: 0.4s ease-in-out;
+    &:hover {
+        box-shadow: ${hoverEffect};
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 1080px){
+    width: 80%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    height: max-content;
+  };
+`;
+const CardContent = styled.div`
+    margin: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    @media screen and (min-width: 320px) and (max-width: 1080px){
+    flex-direction: column;
+    gap: 1rem;
+  };
+`;
+const Slack = styled.div`
+    display: flex;
+`;
+const SlackLogo = styled.div`
+    margin-right: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+        color: white;
+        width: 3rem;
+        height: 3rem;
+    }
+`;
+const SlackText = styled.div`
+    color: white;
+`;
+const SlackHead = styled.h2`
+    fontWeight: 500;
+`;
+const SlackFoot = styled.h5`
+    color: #e4e4e4;
+    fontWeight: normal;
+`;
+const SlackJoin = styled.button`
+    background-color: ${ themeColor };
+    border: none;
+    outline: none;
+    padding: 1rem 2rem;
+    color: white;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+`;
+ 
+export default JoinSlack;
