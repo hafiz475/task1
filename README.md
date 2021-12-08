@@ -1,3 +1,7 @@
+npm install -g json-server   => in powerShell terminal, This is used to install json server in the machine
+npx json-server --watch data/db.json --port 8000   => This is used to build server on our app
+
+
 Testing Git and GitHub repo
 
 # Getting Started with Create React App
